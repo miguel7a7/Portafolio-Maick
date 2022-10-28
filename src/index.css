@@ -1,19 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@0;1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@0;1&display=swap');
 
 *,
 ::after,
 ::before {
   box-sizing: border-box;
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
 }
 
 :root {
   --border: 4px;
   --color-fondo: #f0f2f5;
   --color-texto: #1a202d;
+  --color-texto-dark: #000;
   --color-primary: #dc143c;
+  --color-primary: #1a202d;
 
-  /*   --color-fondo: #dfdfdf;
-  --color-primary: #d23b5a; */
+  --color-bg: #021626;
+  --color-bg: #1e1e1e;
 
   --bg-card-color: #ffffff;
   --text-muted: #7d858d;
@@ -26,8 +29,8 @@
   --color-dark-deep: #1e1e1e;
   --color-sombra: #a9a9a9;
   --color-gris: #edf2f6;
-  --fuente2: "Times New Roman", Times, serif;
-  --fuente: "Tiro Telugu", serif;
+  --fuente2: 'Times New Roman', Times, serif;
+  --fuente: 'Tiro Telugu', serif;
 }
 
 html {
@@ -52,14 +55,14 @@ body.dark {
 }
 
 body::-webkit-scrollbar {
-  width: 8px; /* Tamaño del scroll en vertical */
-  height: 8px; /* Tamaño del scroll en horizontal */
+  width: 4px; /* Tamaño del scroll en vertical */
+  height: 4px; /* Tamaño del scroll en horizontal */
   /* display: none; */ /* Ocultar scroll */
 }
 
 /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
 body::-webkit-scrollbar-thumb {
-  background: var(--color-danger);
+  background: #000;
   border-radius: 4px;
 }
 
@@ -76,6 +79,7 @@ body::-webkit-scrollbar-thumb:active {
 
 a {
   text-decoration: none;
+  color: var(--color-texto);
 }
 
 h1,
@@ -103,9 +107,9 @@ p {
   margin: 0;
 }
 
-[id] {
+/* [id] {
   scroll-margin-top: 9ex;
-}
+} */
 
 main {
   margin-left: auto;
@@ -215,7 +219,7 @@ main {
 }
 
 .btn-primary {
-  background-color: var(--color-blue);
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -225,6 +229,7 @@ main {
   }
   .btn-primary:hover {
     background-color: hsl(206, 68%, 40%);
+    background-color: var(--color-dark);
   }
 }
 
@@ -248,3 +253,54 @@ aspect-ratio: 1/1;
 aspect-ratio: 16/9;
 
 */
+
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  margin: 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  width: 95%;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.section h5 {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 48rem) {
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .section h5 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .section {
+    width: 992px;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .section h5 {
+    font-size: 1rem;
+  }
+}

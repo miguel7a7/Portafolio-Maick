@@ -1,0 +1,29 @@
+.social__container {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.home__social-icon {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.home__social-icon:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 48rem) {
+}
+
+@media screen and (min-width: 62rem) {
+  .social__container {
+    align-items: inherit;
+  }
+
+  .home__social-icon {
+    font-size: 1.4rem;
+  }
+}

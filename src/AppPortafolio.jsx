@@ -1,9 +1,15 @@
 import React from 'react'
+import { About } from './components/about/About'
+import { Header } from './components/header/Header'
 
 export const AppPortafolio = () => {
   return (
-    <div>
-      <h2>Portafolio</h2>
-    </div>
+    <>
+      <Header />
+
+      <>
+        <About />
+      </>
+    </>
   )
 }

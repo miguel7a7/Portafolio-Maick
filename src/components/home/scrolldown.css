@@ -1,0 +1,42 @@
+.scroll__container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.scroll__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wheel {
+  animation: scrollMouse 2s ease infinite;
+}
+
+@keyframes scrollMouse {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(3.75rem);
+  }
+}
+
+.scroll__title {
+  font-size: 0.7rem;
+}
+
+.scroll__arrow {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 48rem) {
+}
+
+@media screen and (min-width: 62rem) {
+  .scroll__icon {
+    justify-content: start;
+    margin-left: 10rem;
+  }
+}
