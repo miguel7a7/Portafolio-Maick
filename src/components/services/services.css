@@ -1,0 +1,138 @@
+.none {
+  display: none;
+}
+
+.services__content {
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem 0;
+  padding: 3rem 0.5rem;
+  position: relative;
+}
+
+.service__item {
+  background-color: var(--bg-card-color);
+  border-radius: var (--border);
+  padding: 2rem 1rem;
+}
+
+.service__header {
+  width: 100%;
+}
+
+.service__item-icon {
+  font-size: 1.3rem;
+}
+
+.service__header-title {
+  margin: 0.5rem 0;
+}
+
+.service__header-more {
+  align-items: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.service__more-icon {
+  margin-left: 10px;
+}
+
+/* Estilos Modal */
+.service__modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(38, 38, 38, 0.7);
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active__modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.service__modal-content {
+  background-color: var(--bg-card-color);
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  padding: 2rem 1rem;
+  width: 90%;
+}
+
+.service__modal-subtitle {
+  font-size: 0.9rem;
+}
+
+.service__modal-list {
+  margin-top: 1rem;
+}
+
+.service__modal-item {
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+
+.service__icon-modal {
+  margin-right: 10px;
+}
+
+.service__modal-closed {
+  color: #000;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .services__content {
+    justify-content: center;
+    grid-template-columns: repeat(3, 218px);
+    width: 100%;
+  }
+
+  .service__item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service__header-title {
+    font-size: 1.1rem;
+  }
+
+  .service__modal-content {
+    margin-top: 2rem;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .services__container {
+    padding-top: 5rem;
+  }
+
+  .services__content {
+    grid-template-columns: repeat(3, 258px);
+  }
+
+  .service__modal-content {
+    margin-top: 7rem;
+  }
+}
